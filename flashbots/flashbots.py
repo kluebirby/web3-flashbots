@@ -163,7 +163,7 @@ class Flashbots(ModuleV2):
         evm_timestamp = (
             block_timestamp
             if block_timestamp is not None
-            else self.extrapolate_timestamp(block_tag, block_details.number)
+            else self.extrapolate_timestamp(block_details.number, block_details.number)
         )
 
         signed_bundled_transactions = self.sign_bundle(bundled_transactions)
